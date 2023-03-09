@@ -148,12 +148,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "spiritedawayghs",
-                "Specification-Vendor"    : "spiritedawayghssareus",
+                "Specification-Title"     : "Spirited Away Mod 1.19.2",
+                "Specification-Vendor"    : "GHS Bergquist P6",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "spiritedawayghssareus",
+                "Implementation-Vendor"   : "GHS Bergquist P6",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
