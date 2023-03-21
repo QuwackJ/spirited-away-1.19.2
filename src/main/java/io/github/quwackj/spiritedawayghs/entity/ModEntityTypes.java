@@ -3,6 +3,10 @@ package io.github.quwackj.spiritedawayghs.entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.registries.DeferredRegister;
@@ -13,8 +17,13 @@ public class ModEntityTypes extends Animal {
         super(animal, level);
     }
 
+    public static AttributeSupplier.Builder createAttributes() {
+        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 2.00).add(Attributes.MOVEMENT_SPEED, 1.00);
+    }
+
     @Override
     protected void registerGoals() {
+        this.goalSelector.addGoal(1, new WaterAvoidingRandomStrollGoal(this, 1.0)); // makes mob walk around and avoid water at normal speed
         super.registerGoals();
     }
 
