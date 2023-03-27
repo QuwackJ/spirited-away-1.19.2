@@ -28,7 +28,6 @@ public class SpiritedAwayGHS {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        //ModEntities.ENTITIES.register(modEventBus);
         EntityInit.ENTITIES.register(modEventBus);
     }
 
