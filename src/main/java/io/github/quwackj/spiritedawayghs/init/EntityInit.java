@@ -1,6 +1,7 @@
 package io.github.quwackj.spiritedawayghs.init;
 
 import io.github.quwackj.spiritedawayghs.SpiritedAwayGHS;
+import io.github.quwackj.spiritedawayghs.entities.OtoriSama;
 import io.github.quwackj.spiritedawayghs.entities.Soot;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -16,4 +17,7 @@ public class EntityInit {
 
     public static final RegistryObject<EntityType<Soot>> SOOT = ENTITIES.register("soot",
             () -> EntityType.Builder.of(Soot::new, MobCategory.CREATURE).build(SpiritedAwayGHS.MOD_ID + "soot"));
+
+    public static final RegistryObject<EntityType<OtoriSama>> OTORISAMA = ENTITIES.register("otorisama",
+            () -> EntityType.Builder.of(OtoriSama::new, MobCategory.CREATURE).build(SpiritedAwayGHS.MOD_ID + "otorisama"));
 }
