@@ -2,6 +2,8 @@ package io.github.quwackj.spiritedawayghs;
 
 import com.mojang.logging.LogUtils;
 import io.github.quwackj.spiritedawayghs.init.EntityInit;
+import io.github.quwackj.spiritedawayghs.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,6 +23,8 @@ public class SpiritedAwayGHS {
 
     public SpiritedAwayGHS() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

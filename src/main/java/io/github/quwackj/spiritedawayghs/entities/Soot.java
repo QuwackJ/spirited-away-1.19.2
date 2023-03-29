@@ -1,6 +1,8 @@
 package io.github.quwackj.spiritedawayghs.entities;
 
+import io.github.quwackj.spiritedawayghs.SpiritedAwayGHS;
 import io.github.quwackj.spiritedawayghs.init.EntityInit;
+import io.github.quwackj.spiritedawayghs.item.ModItems;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
