@@ -7,8 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "spiritedawayghs:green_konpeito"
+      "item": "minecraft:sugar"
+    },
+    "_": {
+      "item": "minecraft:green_dye"
     }
   },
-  ""
+  "result": {
+    "count": 4,
+    "item": "spiritedawayghs:green_konpeito"
+  }
 }
