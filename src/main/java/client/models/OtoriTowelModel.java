@@ -3,28 +3,26 @@ package client.models;// Made with Blockbench 4.6.5
 // Paste this class into your mod and generate all required imports
 
 
+import client.models.OtoriModel;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import io.github.quwackj.spiritedawayghs.SpiritedAwayGHS;
 import io.github.quwackj.spiritedawayghs.entities.OtoriSama;
-import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 
-public class OtoriLeafModel extends OtoriModel {
+public class OtoriTowelModel extends OtoriModel {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(SpiritedAwayGHS.MOD_ID, "otorisama"), "main");
-	private final ModelPart leaf;
+	private final ModelPart towel;
 	private final ModelPart body;
 
-	public OtoriLeafModel(ModelPart root) {
+	public OtoriTowelModel(ModelPart root) {
 		super(root);
-		this.leaf = root.getChild("leaf");
+		this.towel = root.getChild("towel");
 		this.body = root.getChild("body");
 	}
 
@@ -32,20 +30,15 @@ public class OtoriLeafModel extends OtoriModel {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition leaf = partdefinition.addOrReplaceChild("leaf", CubeListBuilder.create().texOffs(66, 0).addBox(4.0F, -32.0F, -6.0F, 4.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(76, 0).addBox(-5.0F, -32.0F, -5.0F, 12.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(66, 3).addBox(-7.0F, -32.0F, -4.0F, 13.0F, 1.0F, 8.0F, new CubeDeformation(0.0F))
-		.texOffs(66, 13).addBox(-8.0F, -32.0F, -3.0F, 1.0F, 1.0F, 6.0F, new CubeDeformation(0.0F))
-		.texOffs(73, 14).addBox(6.0F, -32.0F, -3.0F, 1.0F, 1.0F, 8.0F, new CubeDeformation(0.0F))
-		.texOffs(100, 3).addBox(-6.0F, -32.0F, 4.0F, 13.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(101, 6).addBox(-5.0F, -32.0F, 5.0F, 11.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(106, 9).addBox(-4.0F, -32.0F, 6.0F, 10.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(108, 12).addBox(-4.0F, -32.0F, 7.0F, 9.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(86, 15).addBox(-3.0F, -32.0F, 8.0F, 7.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(67, 3).addBox(-7.0F, -32.0F, 9.0F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(67, 7).addBox(-7.0F, -32.0F, 7.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F))
-		.texOffs(75, 14).addBox(-6.0F, -32.0F, 6.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(67, 14).addBox(7.0F, -31.0F, -6.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(3.0F, 15.0F, -3.0F));
+		PartDefinition towel = partdefinition.addOrReplaceChild("towel", CubeListBuilder.create().texOffs(66, 62).addBox(10.0F, -29.0F, 0.0F, 1.0F, 1.0F, 6.0F, new CubeDeformation(0.0F))
+		.texOffs(81, 85).addBox(10.0F, -31.0F, -1.0F, 1.0F, 2.0F, 8.0F, new CubeDeformation(0.0F))
+		.texOffs(72, 62).addBox(-10.0F, -32.0F, -1.0F, 20.0F, 1.0F, 8.0F, new CubeDeformation(0.0F))
+		.texOffs(80, 75).addBox(-8.0F, -32.0F, -2.0F, 16.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+		.texOffs(80, 75).addBox(-8.0F, -32.0F, 7.0F, 16.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+		.texOffs(90, 80).addBox(-5.0F, -32.0F, -3.0F, 10.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+		.texOffs(90, 80).addBox(-5.0F, -32.0F, 8.0F, 10.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+		.texOffs(66, 62).addBox(-11.0F, -29.0F, 0.0F, 1.0F, 1.0F, 6.0F, new CubeDeformation(0.0F))
+		.texOffs(81, 85).addBox(-11.0F, -31.0F, -1.0F, 1.0F, 2.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 15.0F, -4.0F));
 
 		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(10, 10).addBox(-10.0F, -31.0F, -4.0F, 20.0F, 5.0F, 15.0F, new CubeDeformation(0.0F))
 		.texOffs(40, 60).addBox(10.0F, -26.0F, -4.0F, 5.0F, 35.0F, 15.0F, new CubeDeformation(0.0F))
@@ -54,9 +47,9 @@ public class OtoriLeafModel extends OtoriModel {
 		.texOffs(20, 40).addBox(-10.0F, -11.0F, -14.0F, 20.0F, 15.0F, 5.0F, new CubeDeformation(0.0F))
 		.texOffs(55, 85).addBox(10.0F, -11.0F, -9.0F, 5.0F, 15.0F, 5.0F, new CubeDeformation(0.0F))
 		.texOffs(39, 82).addBox(-15.0F, -11.0F, -9.0F, 5.0F, 15.0F, 5.0F, new CubeDeformation(0.0F))
-		.texOffs(0, 7).addBox(10.0F, 8.0F, -10.0F, 5.0F, 1.0F, 6.0F, new CubeDeformation(0.0F))
-		.texOffs(0, 0).addBox(-15.0F, 8.0F, -10.0F, 5.0F, 1.0F, 6.0F, new CubeDeformation(0.0F))
 		.texOffs(25, 60).addBox(-5.0F, -17.0F, -13.0F, 10.0F, 1.0F, 4.0F, new CubeDeformation(0.0F))
+		.texOffs(0, 0).addBox(-15.0F, 8.0F, -10.0F, 5.0F, 1.0F, 6.0F, new CubeDeformation(0.0F))
+		.texOffs(0, 7).addBox(10.0F, 8.0F, -10.0F, 5.0F, 1.0F, 6.0F, new CubeDeformation(0.0F))
 		.texOffs(4, 36).addBox(15.0F, -10.0F, 0.0F, 2.0F, 10.0F, 5.0F, new CubeDeformation(0.0F))
 		.texOffs(4, 36).addBox(-17.0F, -10.0F, 0.0F, 2.0F, 10.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 15.0F, -4.0F));
 
@@ -70,7 +63,7 @@ public class OtoriLeafModel extends OtoriModel {
 
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-		leaf.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		towel.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 }
