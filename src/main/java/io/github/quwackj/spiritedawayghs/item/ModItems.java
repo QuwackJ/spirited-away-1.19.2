@@ -19,6 +19,12 @@ public class ModItems {
     public static final RegistryObject<Item> RED_KONPEITO = ITEMS.register("red_konpeito",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TAB_SPIRITEDAWAY)));
 
+    public static final RegistryObject<Item> WHITE_KONPEITO = ITEMS.register("white_konpeito",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TAB_SPIRITEDAWAY)));
+
+    public static final RegistryObject<Item> YELLOW_KONPEITO = ITEMS.register("yellow_konpeito",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TAB_SPIRITEDAWAY)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
