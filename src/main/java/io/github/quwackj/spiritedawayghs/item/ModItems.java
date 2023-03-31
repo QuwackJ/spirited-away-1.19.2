@@ -21,7 +21,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, SpiritedAwayGHS.MOD_ID);
 
     public static final RegistryObject<ForgeSpawnEggItem> SOOT_SPAWN_EGG = ITEMS.register("soot_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntitiesInit.SOOT, 0x02070B, 0x071333, new Item.Properties().stacksTo(64).tab(ModCreativeModeTab.TAB_SPIRITEDAWAY)));
+            () -> new ForgeSpawnEggItem(ModEntitiesInit.SOOT, 0x2D3771, 0x3B4C87, new Item.Properties().stacksTo(64).tab(ModCreativeModeTab.TAB_SPIRITEDAWAY)));
 
     public static final RegistryObject<ForgeSpawnEggItem> OTORI_SPAWN_EGG = ITEMS.register("otori_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntitiesInit.OTORISAMA, 0xebd77f, 0x7be660, new Item.Properties().stacksTo(64).tab(ModCreativeModeTab.TAB_SPIRITEDAWAY)));
