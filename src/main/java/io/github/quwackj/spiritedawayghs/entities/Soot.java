@@ -32,19 +32,13 @@ public class Soot extends Animal {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
-        //this.goalSelector.addGoal(1, new ClimbOnTopOfPowderSnowGoal(this, this.level));
-        //this.goalSelector.addGoal(1, new Rabbit.RabbitPanicGoal(this, 2.2D));
-        this.goalSelector.addGoal(2, new BreedGoal(this, 0.8D));
+        this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D));
         this.goalSelector.addGoal(3, new TemptGoal(this, 1.0D, Ingredient.of(ModItems.GREEN_KONPEITO.get(), ModItems.RED_KONPEITO.get(), ModItems.WHITE_KONPEITO.get(), ModItems.YELLOW_KONPEITO.get()), false));
-        //this.goalSelector.addGoal(4, new Rabbit.RabbitAvoidEntityGoal<>(this, Player.class, 8.0F, 2.2D, 2.2D));
-        //this.goalSelector.addGoal(4, new Rabbit.RabbitAvoidEntityGoal<>(this, Wolf.class, 10.0F, 2.2D, 2.2D));
-        //this.goalSelector.addGoal(4, new Rabbit.RabbitAvoidEntityGoal<>(this, Monster.class, 4.0F, 2.2D, 2.2D));
-        //this.goalSelector.addGoal(5, new Rabbit.RaidGardenGoal(this));
         this.goalSelector.addGoal(6, new WaterAvoidingRandomStrollGoal(this, 0.6D));
         this.goalSelector.addGoal(11, new LookAtPlayerGoal(this, Player.class, 10.0F));
     }
 
     public static AttributeSupplier.Builder getSootAttributes() {
-        return Mob.createMobAttributes().add(ForgeMod.ENTITY_GRAVITY.get(), 0.5f).add(Attributes.MAX_HEALTH, 2.00);
+        return Mob.createMobAttributes().add(ForgeMod.ENTITY_GRAVITY.get(), 1.5f).add(Attributes.MAX_HEALTH, 2.00);
     }
 }
