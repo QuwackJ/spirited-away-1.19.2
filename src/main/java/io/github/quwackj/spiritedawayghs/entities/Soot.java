@@ -1,8 +1,6 @@
 package io.github.quwackj.spiritedawayghs.entities;
 
-import io.github.quwackj.spiritedawayghs.SpiritedAwayGHS;
-import io.github.quwackj.spiritedawayghs.init.EntityInit;
-import io.github.quwackj.spiritedawayghs.item.ModItems;
+import io.github.quwackj.spiritedawayghs.init.ModEntitiesInit;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
@@ -11,12 +9,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.animal.Rabbit;
-import net.minecraft.world.entity.animal.Wolf;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
@@ -32,7 +25,7 @@ public class Soot extends Animal {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob mob) {
-        return EntityInit.SOOT.get().create(level);
+        return ModEntitiesInit.SOOT.get().create(level);
     }
 
     @Override
