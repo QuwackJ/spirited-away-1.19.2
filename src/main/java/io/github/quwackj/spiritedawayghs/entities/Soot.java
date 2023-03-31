@@ -41,7 +41,7 @@ public class Soot extends Animal {
         //this.goalSelector.addGoal(1, new ClimbOnTopOfPowderSnowGoal(this, this.level));
         //this.goalSelector.addGoal(1, new Rabbit.RabbitPanicGoal(this, 2.2D));
         this.goalSelector.addGoal(2, new BreedGoal(this, 0.8D));
-        this.goalSelector.addGoal(3, new TemptGoal(this, 1.0D, Ingredient.of(Items.COOKIE, Items.SUGAR, Blocks.CAKE), false));
+        this.goalSelector.addGoal(3, new TemptGoal(this, 1.0D, Ingredient.of(ModItems.GREEN_KONPEITO.get(), ModItems.RED_KONPEITO.get(), ModItems.WHITE_KONPEITO.get(), ModItems.YELLOW_KONPEITO.get()), false));
         //this.goalSelector.addGoal(4, new Rabbit.RabbitAvoidEntityGoal<>(this, Player.class, 8.0F, 2.2D, 2.2D));
         //this.goalSelector.addGoal(4, new Rabbit.RabbitAvoidEntityGoal<>(this, Wolf.class, 10.0F, 2.2D, 2.2D));
         //this.goalSelector.addGoal(4, new Rabbit.RabbitAvoidEntityGoal<>(this, Monster.class, 4.0F, 2.2D, 2.2D));
