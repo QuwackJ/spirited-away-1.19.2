@@ -6,14 +6,11 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.food.Foods;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.FoodOnAStickItem;
 import io.github.quwackj.spiritedawayghs.init.ModEntitiesInit;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemFrameItem;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -25,7 +22,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, SpiritedAwayGHS.MOD_ID);
 
     public static final RegistryObject<ForgeSpawnEggItem> SOOT_SPAWN_EGG = ITEMS.register("soot_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntitiesInit.SOOT, 0x000000, 0xfff, new Item.Properties().stacksTo(64).tab(ModCreativeModeTab.TAB_SPIRITEDAWAY)));
+            () -> new ForgeSpawnEggItem(ModEntitiesInit.SOOT, 0x2D3771, 0x3B4C87, new Item.Properties().stacksTo(64).tab(ModCreativeModeTab.TAB_SPIRITEDAWAY)));
 
     public static final RegistryObject<ForgeSpawnEggItem> OTORI_SPAWN_EGG = ITEMS.register("otori_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntitiesInit.OTORISAMA, 0xffd500, 0x37cf15, new Item.Properties().stacksTo(64).tab(ModCreativeModeTab.TAB_SPIRITEDAWAY)));
