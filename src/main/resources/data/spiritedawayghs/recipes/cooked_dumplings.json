@@ -1,0 +1,11 @@
+{
+  "type": "spiritedawayghs:steaming",
+  "ingredients": [
+    {
+      "item": "spiritedawayghs:raw_dumplings"
+    }
+  ],
+  "output": {
+    "item": "spiritedawayghs:cooked_dumplings"
+  }
+}

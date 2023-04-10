@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "spiritedawayghs:block/steamer_closed_empty"
+    },
+    "facing=south": {
+      "model": "spiritedawayghs:block/steamer_closed_empty",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "spiritedawayghs:block/steamer_closed_empty",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "spiritedawayghs:block/steamer_closed_empty",
+      "y": 90
+    }
+  }
+}

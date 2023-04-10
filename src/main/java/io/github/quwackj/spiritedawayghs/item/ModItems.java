@@ -3,13 +3,17 @@ package io.github.quwackj.spiritedawayghs.item;
 import io.github.quwackj.spiritedawayghs.SpiritedAwayGHS;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.food.Foods;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.FoodOnAStickItem;
 import io.github.quwackj.spiritedawayghs.init.ModEntitiesInit;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemFrameItem;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -38,38 +42,19 @@ public class ModItems {
     public static final RegistryObject<Item> YELLOW_KONPEITO = ITEMS.register("yellow_konpeito",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TAB_SPIRITEDAWAY).food(Foods.YELLOW_KONPEITO)));
 
+    public static final RegistryObject<Item> RAW_DUMPLINGS = ITEMS.register("raw_dumplings",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TAB_SPIRITEDAWAY).food(Foods.RAW_DUMPLINGS)));
+
+    public static final RegistryObject<Item> COOKED_DUMPLINGS = ITEMS.register("cooked_dumplings",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TAB_SPIRITEDAWAY).food(Foods.COOKED_DUMPLINGS)));
+
     public static class Foods {
-        public static final FoodProperties GREEN_KONPEITO = new FoodProperties.Builder()
-                .nutrition(1)
-                .saturationMod(0.6f)
-                .alwaysEat()
-                .fast()
-                .effect(() -> new MobEffectInstance(MobEffects.JUMP, 300, 1), 1)
-                .build();
-
-        public static final FoodProperties RED_KONPEITO = new FoodProperties.Builder()
-                .nutrition(1)
-                .saturationMod(0.6f)
-                .alwaysEat()
-                .fast()
-                .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300), 1)
-                .build();
-
-        public static final FoodProperties WHITE_KONPEITO = new FoodProperties.Builder()
-                .nutrition(1)
-                .saturationMod(0.6f)
-                .alwaysEat()
-                .fast()
-                .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 300), 1)
-                .build();
-
-        public static final FoodProperties YELLOW_KONPEITO = new FoodProperties.Builder()
-                .nutrition(1)
-                .saturationMod(0.6f)
-                .alwaysEat()
-                .fast()
-                .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300), 1)
-                .build();
+        public static final FoodProperties GREEN_KONPEITO = new FoodProperties.Builder().nutrition(1).saturationMod(0.6f).alwaysEat().fast().effect(() -> new MobEffectInstance(MobEffects.JUMP, 300, 1), 1).build();
+        public static final FoodProperties RED_KONPEITO = new FoodProperties.Builder().nutrition(1).saturationMod(0.6f).alwaysEat().fast().effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300), 1).build();
+        public static final FoodProperties WHITE_KONPEITO = new FoodProperties.Builder().nutrition(1).saturationMod(0.6f).alwaysEat().fast().effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 300), 1).build();
+        public static final FoodProperties YELLOW_KONPEITO = new FoodProperties.Builder().nutrition(1).saturationMod(0.6f).alwaysEat().fast().effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300), 1).build();
+        public static final FoodProperties RAW_DUMPLINGS = new FoodProperties.Builder().nutrition(2).saturationMod(0.3f).meat().effect(() -> new MobEffectInstance(MobEffects.HUNGER, 600, 0), 0.3F).build();
+        public static final FoodProperties COOKED_DUMPLINGS = new FoodProperties.Builder().nutrition(6).saturationMod(0.6F).meat().build();
     }
 
     public static void register(IEventBus eventBus) {

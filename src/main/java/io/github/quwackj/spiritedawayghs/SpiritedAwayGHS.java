@@ -1,8 +1,14 @@
 package io.github.quwackj.spiritedawayghs;
 
 import com.mojang.logging.LogUtils;
+import io.github.quwackj.spiritedawayghs.block.ModBlocks;
+import io.github.quwackj.spiritedawayghs.block.entity.ModBlockEntities;
 import io.github.quwackj.spiritedawayghs.init.ModEntitiesInit;
 import io.github.quwackj.spiritedawayghs.item.ModItems;
+import io.github.quwackj.spiritedawayghs.recipe.ModRecipes;
+import io.github.quwackj.spiritedawayghs.screen.ModMenuTypes;
+import io.github.quwackj.spiritedawayghs.screen.SteamerScreen;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -24,6 +30,12 @@ public class SpiritedAwayGHS {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -43,7 +55,7 @@ public class SpiritedAwayGHS {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            MenuScreens.register(ModMenuTypes.STEAMER_MENU.get(), SteamerScreen::new);
         }
     }
 }

@@ -5,9 +5,13 @@ import io.github.quwackj.spiritedawayghs.entities.OtoriSama;
 import io.github.quwackj.spiritedawayghs.entities.Soot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.decoration.ItemFrame;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.rmi.registry.Registry;
+import java.security.DigestInputStream;
 
 public class ModEntitiesInit {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, SpiritedAwayGHS.MOD_ID);
@@ -17,4 +21,5 @@ public class ModEntitiesInit {
 
     public static final RegistryObject<EntityType<OtoriSama>> OTORISAMA = ENTITIES.register("otorisama",
             () -> EntityType.Builder.of(OtoriSama::new, MobCategory.CREATURE).build(SpiritedAwayGHS.MOD_ID + "otorisama"));
+
 }

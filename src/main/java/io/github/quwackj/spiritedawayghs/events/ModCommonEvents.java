@@ -15,4 +15,5 @@ public class ModCommonEvents {
         event.put(ModEntitiesInit.SOOT.get(), Soot.getSootAttributes().build());
         event.put(ModEntitiesInit.OTORISAMA.get(), OtoriSama.getOtoriAttributes().build());
     }
+
 }

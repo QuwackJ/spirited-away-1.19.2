@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#_#",
+    " # "
+  ],
+  "key": {
+    "_": {
+      "item": "minecraft:beef"
+    },
+    "#": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "count": 4,
+    "item": "spiritedawayghs:green_konpeito"
+  }
+}

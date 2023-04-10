@@ -3,10 +3,13 @@
   "item.spiritedawayghs.red_konpeito": "Red Konpeito",
   "item.spiritedawayghs.white_konpeito": "White Konpeito",
   "item.spiritedawayghs.yellow_konpeito": "Yellow Konpeito",
+  "item.spiritedawayghs.raw_dumplings": "Raw Dumplings",
+  "item.spiritedawayghs.cooked_dumplings": "Cooked Dumplings",
 
   "item.spiritedawayghs.soot_spawn_egg": "Soot Spawn Egg",
   "item.spiritedawayghs.otori_spawn_egg": "Otori-sama Spawn Egg",
 
+  "block.spiritedawayghs.steamer": "Steamer",
 
   "itemGroup.spiritedawaytab": "Spirited Away"
 }
