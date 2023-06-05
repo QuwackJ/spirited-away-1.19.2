@@ -1,7 +1,9 @@
 package io.github.quwackj.spiritedawayghs.events;
 
+import client.models.NoFaceModel;
 import client.models.OtoriModel;
 import client.models.SootModel;
+import client.renderer.NoFaceRenderer;
 import client.renderer.OtoriRenderer;
 import client.renderer.SootRenderer;
 import io.github.quwackj.spiritedawayghs.SpiritedAwayGHS;
@@ -18,12 +20,14 @@ public class ModClientEvents {
     public static void entityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntitiesInit.SOOT.get(), SootRenderer::new);
         event.registerEntityRenderer(ModEntitiesInit.OTORISAMA.get(), OtoriRenderer::new);
+        event.registerEntityRenderer(ModEntitiesInit.NOFACE.get(), NoFaceRenderer::new);
     }
 
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(SootModel.LAYER_LOCATION, SootModel::createBodyLayer);
         event.registerLayerDefinition(OtoriModel.LAYER_LOCATION, OtoriModel::createBodyLayer);
+        event.registerLayerDefinition(NoFaceModel.LAYER_LOCATION, NoFaceModel::createBodyLayer);
     }
 
 }

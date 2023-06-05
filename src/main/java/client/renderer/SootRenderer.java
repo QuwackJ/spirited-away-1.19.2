@@ -11,7 +11,7 @@ public class SootRenderer extends MobRenderer<Soot, SootModel> {
     private static final ResourceLocation TEXTURE = new ResourceLocation(SpiritedAwayGHS.MOD_ID, "textures/entities/soot.png");
 
     public SootRenderer(EntityRendererProvider.Context ctx) {
-        super(ctx, new SootModel(ctx.bakeLayer(SootModel.LAYER_LOCATION)), 0.5f);
+        super(ctx, new SootModel(ctx.bakeLayer(SootModel.LAYER_LOCATION)), 0.0f);
     }
 
     @Override

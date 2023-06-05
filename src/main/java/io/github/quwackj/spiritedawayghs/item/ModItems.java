@@ -27,6 +27,9 @@ public class ModItems {
     public static final RegistryObject<ForgeSpawnEggItem> OTORI_SPAWN_EGG = ITEMS.register("otori_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntitiesInit.OTORISAMA, 0xffd500, 0x37cf15, new Item.Properties().stacksTo(64).tab(ModCreativeModeTab.TAB_SPIRITEDAWAY)));
 
+    public static final RegistryObject<ForgeSpawnEggItem> NOFACE_SPAWN_EGG = ITEMS.register("noface_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntitiesInit.NOFACE, 0xe6d9fa, 0x9a51cf, new Item.Properties().stacksTo(64).tab(ModCreativeModeTab.TAB_SPIRITEDAWAY)));
+
     public static final RegistryObject<Item> GREEN_KONPEITO = ITEMS.register("green_konpeito",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TAB_SPIRITEDAWAY).food(Foods.GREEN_KONPEITO)));
 

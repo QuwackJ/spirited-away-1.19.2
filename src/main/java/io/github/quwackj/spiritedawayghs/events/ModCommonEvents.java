@@ -1,6 +1,7 @@
 package io.github.quwackj.spiritedawayghs.events;
 
 import io.github.quwackj.spiritedawayghs.SpiritedAwayGHS;
+import io.github.quwackj.spiritedawayghs.entities.NoFace;
 import io.github.quwackj.spiritedawayghs.entities.OtoriSama;
 import io.github.quwackj.spiritedawayghs.entities.Soot;
 import io.github.quwackj.spiritedawayghs.init.ModEntitiesInit;
@@ -14,6 +15,7 @@ public class ModCommonEvents {
     public static void entityAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntitiesInit.SOOT.get(), Soot.getSootAttributes().build());
         event.put(ModEntitiesInit.OTORISAMA.get(), OtoriSama.getOtoriAttributes().build());
+        event.put(ModEntitiesInit.NOFACE.get(), NoFace.getNoFaceAttributes().build());
     }
 
 }
