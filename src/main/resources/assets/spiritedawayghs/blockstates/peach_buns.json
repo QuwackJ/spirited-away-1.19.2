@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "spiritedawayghs:block/peach_buns"
+    },
+    "facing=south": {
+      "model": "spiritedawayghs:block/peach_buns",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "spiritedawayghs:block/peach_buns",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "spiritedawayghs:block/peach_buns",
+      "y": 90
+    }
+  }
+}

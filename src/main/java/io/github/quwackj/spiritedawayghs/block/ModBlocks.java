@@ -1,6 +1,7 @@
 package io.github.quwackj.spiritedawayghs.block;
 
 import io.github.quwackj.spiritedawayghs.SpiritedAwayGHS;
+import io.github.quwackj.spiritedawayghs.block.custom.PeachBlock;
 import io.github.quwackj.spiritedawayghs.block.custom.SteamerBlock;
 import io.github.quwackj.spiritedawayghs.item.ModCreativeModeTab;
 import io.github.quwackj.spiritedawayghs.item.ModItems;
@@ -12,6 +13,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -24,6 +26,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> STEAMER = registerBlock("steamer",
             () -> new SteamerBlock(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion().strength(2.0F, 3.0F).sound(SoundType.BAMBOO)), ModCreativeModeTab.TAB_SPIRITEDAWAY);
+    public static final RegistryObject<Block> PEACH_BUNS = registerBlock("peach_buns",
+            () -> new PeachBlock(BlockBehaviour.Properties.of(Material.CAKE).noOcclusion().strength(2.0F,3.0F).sound(SoundType.BAMBOO)), ModCreativeModeTab.TAB_SPIRITEDAWAY);
+
 
         private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
