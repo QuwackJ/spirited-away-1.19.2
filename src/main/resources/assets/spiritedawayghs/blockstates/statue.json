@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "spiritedawayghs:block/statue"
+    },
+    "facing=south": {
+      "model": "spiritedawayghs:block/statue",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "spiritedawayghs:block/statue",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "spiritedawayghs:block/statue",
+      "y": 90
+    }
+  }
+}
